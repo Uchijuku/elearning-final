@@ -1,0 +1,60 @@
+/* src/components/Dashboard.css */
+:root {
+  --card-bg: #ffffff;
+  --main-text: #333333;
+  --sub-text: #666666;
+  --accent-orange: #f89174;
+  --accent-blue: #227be2;
+  --border-color: #f0f0f0;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --border-radius: 20px;
+}
+
+/* ★★★ ここでフォントを全体に適用 ★★★ */
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-color: #f0f2f5;
+}
+
+.container { max-width: 480px; margin: 0 auto; padding: 16px; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.header-title { font-size: 20px; font-weight: 800; }
+.user-info { display: flex; align-items: center; font-size: 14px; }
+.user-name { font-weight: 700; margin-right: 8px; }
+.logout-button { font-size: 12px; color: var(--sub-text); text-decoration: none; background: none; border: none; cursor: pointer; }
+.main-nav { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+.nav-button { background-color: var(--accent-orange); color: white; border: none; border-radius: var(--border-radius); padding: 14px; font-size: 16px; font-weight: 700; box-shadow: 0 4px 8px rgba(248, 145, 116, 0.4); cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.main-grid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 1fr); gap: 16px; margin-bottom: 20px; }
+.grid-card { background-color: var(--card-bg); border-radius: var(--border-radius); box-shadow: var(--shadow); padding: 16px; aspect-ratio: 1 / 1; display: flex; flex-direction: column; }
+.points-card { justify-content: center; text-align: center; }
+.points-card .label { font-size: 14px; font-weight: 500; color: var(--sub-text); }
+.points-card .total-count { font-size: 40px; font-weight: 800; color: var(--accent-blue); line-height: 1.1; }
+.points-card .sub-stats { display: flex; justify-content: space-between; font-size: 12px; margin-top: 8px; }
+.points-card .sub-stats span { font-size: 16px; font-weight: 700; color: var(--main-text); margin-left: 4px; }
+.streak-card { justify-content: center; align-items: center; text-align: center; }
+.streak-card .streak-days { font-size: 48px; font-weight: 800; line-height: 1; color: var(--accent-orange); }
+.streak-card .streak-label { font-size: 24px; font-weight: 700; margin: 0 4px; }
+.streak-card .fire { font-size: 32px; }
+.ranking-card { justify-content: center; }
+.ranking-card h3 { font-size: 14px; margin: 0 0 12px 0; font-weight: 700; color: var(--sub-text); text-align: center;}
+.ranking-card ol { list-style: none; padding: 0; margin: 0; space-y: 4px;}
+.ranking-card li { display: flex; align-items: center; font-size: 14px;}
+.ranking-card .rank { font-weight: 700; font-size: 16px; width: 24px; color: var(--sub-text); }
+.ranking-card .name { flex-grow: 1; margin-left: 8px; font-weight: 500;}
+.ranking-card .score { font-weight: 700; }
+.assignment-card h3 { font-size: 14px; font-weight: 700; margin: 0 0 8px 0; flex-shrink: 0; }
+.assignment-card ul { list-style: disc; padding-left: 20px; margin: 0; font-size: 12px; line-height: 1.6; flex-grow: 1; overflow-y: auto; }
+.assignment-card li span { color: var(--accent-orange); font-size: 11px; margin-left: 4px; }
+.subjects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.subject-button { background-color: var(--card-bg); border: 1px solid #eee; border-radius: var(--border-radius); padding: 16px 8px; text-align: center; font-size: 14px; font-weight: 700; box-shadow: var(--shadow); cursor: pointer; transition: transform 0.2s; }
+.subject-button:hover { transform: translateY(-2px); }
+.subject-button.disabled { background-color: #f8f8f8; color: #b0b0b0; cursor: not-allowed; }
+.subject-button .icon-wrapper { width: 48px; height: 48px; margin: 0 auto 8px auto; border-radius: 12px; display: flex; justify-content: center; align-items: center; font-size: 22px; }
+
+/* ★★★ ここからが教科ごとの色設定 ★★★ */
+.subject-japanese { background-color: #ffe8e8; color: #ff6b6b; }
+.subject-english { background-color: #e6f3ff; color: #4dabf7; }
+.subject-social { background-color: #fff9e6; color: #ffd43b; }
+.subject-science { background-color: #e6fffb; color: #38d9a9; }
+.subject-math { background-color: #f3f3f3; color: #b0b0b0; }
+.subject-results { background-color: #f3e8ff; color: #a966ff; }
